@@ -69,3 +69,4 @@
     link.addEventListener('click', () => navLinks.classList.remove('nav-open'));
   });
 })();
+
