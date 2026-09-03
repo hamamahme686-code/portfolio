@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmed Hamam — Junior Penetration Tester</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===================== BOOT / SCAN SEQUENCE ===================== -->
+<div id="boot-screen">
+  <div class="boot-terminal">
+    <div class="boot-line" data-text="root@recon:~$ nmap -sV -A target/ahmed_hamam"></div>
+    <div class="boot-line" data-text="Starting scan engine..."></div>
+    <div class="boot-line" data-text="Host is up (0.0021s latency)."></div>
+    <div class="boot-line" data-text="Discovered open service: PENETRATION_TESTING (junior/active)"></div>
+    <div class="boot-line" data-text="Discovered open service: NETWORK_SECURITY (ccna-hardened)"></div>
+    <div class="boot-line" data-text="Discovered open service: VULN_ASSESSMENT (owasp-top-10)"></div>
+    <div class="boot-line boot-final" data-text="TARGET IDENTIFIED: AHMED MOHAMED GABER HAMAM"></div>
+    <div class="boot-line boot-status" data-text="[ ACCESS GRANTED — LOADING FULL REPORT ]"></div>
+    <div class="boot-cursor">_</div>
+  </div>
+  <button id="skip-boot" aria-label="Skip intro animation">Skip intro →</button>
+</div>
+
+<!-- ===================== SCANLINE / NOISE OVERLAY ===================== -->
+<div class="scanline-overlay" aria-hidden="true"></div>
+
+<!-- ===================== NAV ===================== -->
+<nav id="site-nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">AH<span class="nav-logo-dot">.</span></a>
+    <div class="nav-links">
+      <a href="#about">Identity</a>
+      <a href="#skills">Findings</a>
+      <a href="#projects">Engagements</a>
+      <a href="#experience">Timeline</a>
+      <a href="#certs">Clearance</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+    <button id="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<main id="report" class="hidden-report">
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero">
+    <div class="report-margin">
+      <span>CLASSIFICATION: PUBLIC</span>
+      <span>REPORT ID: AH-2026-JPT-001</span>
+    </div>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse-dot"></span> LIVE ENGAGEMENT — STATUS: ACTIVE</p>
+        <h1 class="hero-title">
+          Finding what's<br>
+          <span class="hero-title-accent">hidden</span> before<br>
+          they do.
+        </h1>
+        <p class="hero-tagline">
+          I'm Ahmed Hamam — a junior penetration tester who scans, exploits, and documents
+          security weaknesses in networks and web applications, then hands back a fix, not just a finding.
+        </p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary">Explore My Work</a>
+          <a href="assets/Ahmed_Hamam_CV.pdf" download class="btn btn-ghost">Download CV ↓</a>
+        </div>
+        <div class="hero-meta">
+          <div><span class="hero-meta-num">93%</span><span class="hero-meta-label">Current CGPA</span></div>
+          <div><span class="hero-meta-num">3</span><span class="hero-meta-label">Certifications</span></div>
+          <div><span class="hero-meta-num">10+</span><span class="hero-meta-label">Tools Mastered</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="id-badge">
+          <div class="id-badge-top">
+            <span class="id-badge-chip"></span>
+            <span class="id-badge-label">SECURITY CLEARANCE</span>
+          </div>
+          <div class="id-avatar" aria-hidden="true">
+            <svg viewBox="0 0 200 200" class="id-avatar-svg">
+              <circle cx="100" cy="100" r="98" class="avatar-ring"/>
+              <path d="M100 55c-24 0-38 16-38 42 0 20 12 33 20 38-30 8-52 26-58 48h152c-6-22-28-40-58-48 8-5 20-18 20-38 0-26-14-42-38-42z" class="avatar-shape"/>
+              <rect x="0" y="0" width="200" height="200" class="avatar-scanband"/>
+            </svg>
+          </div>
+          <div class="id-badge-info">
+            <p class="id-name">AHMED M. G. HAMAM</p>
+            <p class="id-role">JUNIOR PENETRATION TESTER</p>
+            <div class="id-barcode" aria-hidden="true"></div>
+            <p class="id-loc">ELMAHALLA · GHARBIAH · EGYPT</p>
+          </div>
+        </div>
+        <div class="floating-icon fi-1" title="Nmap">NMAP</div>
+        <div class="floating-icon fi-2" title="Metasploit">MSF</div>
+        <div class="floating-icon fi-3" title="Burp Suite">BURP</div>
+        <div class="floating-icon fi-4" title="Nessus">NESSUS</div>
+        <div class="floating-icon fi-5" title="OWASP Top 10">OWASP</div>
+        <div class="floating-icon fi-6" title="Kali Linux">KALI</div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to next section">
+      <span class="scroll-indicator-text">SCROLL TO EXPAND REPORT</span>
+      <span class="scroll-indicator-line"></span>
+    </a>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="reveal">
+    <div class="section-head">
+      <span class="section-tag">01 — SUBJECT PROFILE</span>
+      <h2 class="section-title">Identity Verification</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="about-lead">
+          I got into cybersecurity the way most pentesters do — by wanting to know how things
+          break before someone else finds out the hard way.
+        </p>
+        <p>
+          I'm currently studying Network &amp; System Administration at Delta Technological
+          University while working as a Cybersecurity Intern at DEPI, where I run vulnerability
+          assessments against live lab environments and write the kind of reports that get
+          issues actually fixed — not just flagged.
+        </p>
+        <p>
+          My background sits at the intersection of two disciplines: strong networking
+          fundamentals from a CCNA and NTI Network Security background, and offensive security
+          skills I'm building toward the eJPT. I like the technical depth of exploitation as much
+          as the discipline of documenting it clearly for people who aren't in the terminal with me.
+        </p>
+      </div>
+      <div class="about-stack">
+        <div class="stack-card">
+          <span class="stack-card-icon">◆</span>
+          <p class="stack-card-title">Offense</p>
+          <p class="stack-card-desc">Vulnerability scanning, exploitation, web app testing against OWASP Top 10.</p>
+        </div>
+        <div class="stack-card">
+          <span class="stack-card-icon">◆</span>
+          <p class="stack-card-title">Defense</p>
+          <p class="stack-card-desc">VLANs, ACLs, firewalls, IPsec VPNs — I harden what I know how to break.</p>
+        </div>
+        <div class="stack-card">
+          <span class="stack-card-icon">◆</span>
+          <p class="stack-card-title">Reporting</p>
+          <p class="stack-card-desc">Risk-prioritized findings with root cause and remediation, not just raw scan output.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS / FINDINGS ===================== -->
+  <section id="skills" class="reveal">
+    <div class="section-head">
+      <span class="section-tag">02 — FINDINGS SUMMARY</span>
+      <h2 class="section-title">Skill Severity Index</h2>
+      <p class="section-sub">Rated the way I rate a real finding — by how deep the capability goes, not a generic percentage.</p>
+    </div>
+
+    <div class="findings-legend">
+      <span class="sev-chip sev-critical">CRITICAL</span>
+      <span class="sev-chip sev-high">HIGH</span>
+      <span class="sev-chip sev-medium">MEDIUM</span>
+      <span class="sev-chip sev-low">LOW</span>
+    </div>
+
+    <div class="findings-table" role="table">
+      <div class="findings-row findings-row-head" role="row">
+        <span>FINDING</span><span>CATEGORY</span><span>SEVERITY</span><span class="findings-row-detail-head">DETAIL</span>
+      </div>
+
+      <div class="findings-row" role="row" data-sev="critical">
+        <span class="f-name">Vulnerability Assessment &amp; Scanning</span>
+        <span class="f-cat">Offensive Security</span>
+        <span class="sev-chip sev-critical">CRITICAL</span>
+        <span class="f-detail">Nessus, Nmap, Nikto — full-cycle scan → triage → validated exploitation with Metasploit.</span>
+      </div>
+      <div class="findings-row" role="row" data-sev="critical">
+        <span class="f-name">Web Application Security</span>
+        <span class="f-cat">Offensive Security</span>
+        <span class="sev-chip sev-critical">CRITICAL</span>
+        <span class="f-detail">Burp Suite testing across OWASP Top 10 — injection, access control, SQLi.</span>
+      </div>
+      <div class="findings-row" role="row" data-sev="high">
+        <span class="f-name">Network Reconnaissance &amp; Enumeration</span>
+        <span class="f-cat">Network Security</span>
+        <span class="sev-chip sev-high">HIGH</span>
+        <span class="f-detail">Port scanning, service enumeration, attack-surface mapping across lab networks.</span>
+      </div>
+      <div class="findings-row" role="row" data-sev="high">
+        <span class="f-name">Windows &amp; Linux Security Enumeration</span>
+        <span class="f-cat">Systems</span>
+        <span class="sev-chip sev-high">HIGH</span>
+        <span class="f-detail">Privilege escalation paths, AD fundamentals, host-level hardening review.</span>
+      </div>
+      <div class="findings-row" role="row" data-sev="medium">
+        <span class="f-name">Network Infrastructure Hardening</span>
+        <span class="f-cat">Network Security</span>
+        <span class="sev-chip sev-medium">MEDIUM</span>
+        <span class="f-detail">VLANs, ACLs, OSPF, NAT, Cisco ASA / ZPF firewalls, site-to-site IPsec VPNs.</span>
+      </div>
+      <div class="findings-row" role="row" data-sev="medium">
+        <span class="f-name">Vulnerability Documentation &amp; Reporting</span>
+        <span class="f-cat">Communication</span>
+        <span class="sev-chip sev-medium">MEDIUM</span>
+        <span class="f-detail">Root-cause analysis, business impact, and remediation guidance in every report.</span>
+      </div>
+      <div class="findings-row" role="row" data-sev="low">
+        <span class="f-name">Password Auditing</span>
+        <span class="f-cat">Offensive Security</span>
+        <span class="sev-chip sev-low">LOW</span>
+        <span class="f-detail">Hashcat for offline credential attack practice in lab environments.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS / ENGAGEMENTS ===================== -->
+  <section id="projects" class="reveal">
+    <div class="section-head">
+      <span class="section-tag">03 — ENGAGEMENT LOG</span>
+      <h2 class="section-title">Selected Engagements</h2>
+    </div>
+    <div class="engagement-grid">
+
+      <article class="engagement-card">
+        <div class="engagement-card-head">
+          <span class="engagement-id">ENG-01</span>
+          <span class="sev-chip sev-critical">ACTIVE</span>
+        </div>
+        <h3>DEPI Cybersecurity Internship</h3>
+        <p>Security testing and vulnerability assessment against intentionally vulnerable systems, using Metasploit
+          to identify, validate, and prioritize exploitable weaknesses by risk severity — then writing the reports
+          that got them remediated.</p>
+        <div class="engagement-tags">
+          <span>Metasploit</span><span>Risk Prioritization</span><span>Reporting</span>
+        </div>
+        <a class="engagement-link" href="https://tryhackme.com/p/hamamahme686" target="_blank" rel="noopener">View TryHackMe profile →</a>
+      </article>
+
+      <article class="engagement-card">
+        <div class="engagement-card-head">
+          <span class="engagement-id">ENG-02</span>
+          <span class="sev-chip sev-high">COMPLETE</span>
+        </div>
+        <h3>Penetration Testing Lab Series</h3>
+        <p>Full-cycle lab engagements: Nessus/Nmap/Nikto scanning, Burp Suite web app testing against the OWASP
+          Top 10, and exploitation with Metasploit against Metasploitable2 to confirm real-world exploitability
+          of every finding.</p>
+        <div class="engagement-tags">
+          <span>Nmap</span><span>Burp Suite</span><span>Metasploitable2</span>
+        </div>
+        <a class="engagement-link" href="https://tryhackme.com/p/hamamahme686" target="_blank" rel="noopener">View TryHackMe profile →</a>
+      </article>
+
+      <article class="engagement-card">
+        <div class="engagement-card-head">
+          <span class="engagement-id">ENG-03</span>
+          <span class="sev-chip sev-medium">COMPLETE</span>
+        </div>
+        <h3>Cisco Network Hardening Lab</h3>
+        <p>Designed and tested VLANs, ACLs, OSPF, NAT, and SSH across a multi-router topology, deployed Cisco ASA
+          and Zone-Based Policy Firewalls, and built site-to-site IPsec VPN tunnels between simulated branches.</p>
+        <div class="engagement-tags">
+          <span>Cisco ASA</span><span>IPsec VPN</span><span>ACLs</span>
+        </div>
+        <a class="engagement-link" href="https://linkedin.com/in/ahmed-hamam-983baa430" target="_blank" rel="noopener">View LinkedIn →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE / TIMELINE ===================== -->
+  <section id="experience" class="reveal">
+    <div class="section-head">
+      <span class="section-tag">04 — CHAIN OF CUSTODY</span>
+      <h2 class="section-title">Experience &amp; Education Timeline</h2>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">Jan 2026 — Present</span>
+          <h3>Cybersecurity Intern — DEPI</h3>
+          <p class="timeline-loc">Digital Egypt Pioneers Initiative · Tanta, Egypt</p>
+          <p>Performing security testing and vulnerability assessment against intentionally vulnerable systems,
+            authoring detailed assessment reports, and delivering prioritized remediation recommendations.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">Jan 2024 — Mar 2024</span>
+          <h3>Cybersecurity &amp; Penetration Testing Labs</h3>
+          <p class="timeline-loc">Hands-on Training · Remote / Lab Environment</p>
+          <p>Ran vulnerability scans, tested web apps against the OWASP Top 10, executed network security
+            assessments, and documented Linux/Windows enumeration findings with impact ratings.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">Jul 2023 — Aug 2023</span>
+          <h3>Cisco Networking &amp; Security Training</h3>
+          <p class="timeline-loc">Network Security Labs · Remote / Lab Environment</p>
+          <p>Designed and hardened multi-router topologies with VLANs, ACLs, OSPF, and NAT; deployed firewalls
+            and built site-to-site IPsec VPN tunnels.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot timeline-dot-edu"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">Oct 2023 — Jul 2027</span>
+          <h3>B.Sc. Network &amp; System Administration</h3>
+          <p class="timeline-loc">Delta Technological University, Egypt · CGPA 93%</p>
+          <p>Coursework and hands-on training in computer networks, network security, Linux, and cybersecurity
+            fundamentals, including vulnerability assessment and penetration testing labs.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== CERTIFICATIONS / CLEARANCE ===================== -->
+  <section id="certs" class="reveal">
+    <div class="section-head">
+      <span class="section-tag">05 — CLEARANCE LEVELS</span>
+      <h2 class="section-title">Certifications</h2>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card cert-card-progress">
+        <span class="cert-status">IN PROGRESS</span>
+        <h3>eJPT</h3>
+        <p>eLearnSecurity Junior Penetration Tester</p>
+      </div>
+      <div class="cert-card">
+        <span class="cert-status cert-status-done">GRANTED</span>
+        <h3>Network Security</h3>
+        <p>National Telecommunication Institute (NTI)</p>
+      </div>
+      <div class="cert-card">
+        <span class="cert-status cert-status-done">GRANTED</span>
+        <h3>CCNA</h3>
+        <p>Cisco Certified Network Associate</p>
+      </div>
+    </div>
+
+    <div class="lang-strip">
+      <span>ARABIC — NATIVE</span>
+      <span class="lang-sep">//</span>
+      <span>ENGLISH — INTERMEDIATE</span>
+    </div>
+  </section>
+
+  <!-- ===================== FINAL CTA ===================== -->
+  <section id="contact" class="reveal final-cta">
+    <div class="final-cta-inner">
+      <span class="section-tag">06 — DISCLOSURE</span>
+      <h2 class="final-cta-title">Let's build something<br>airtight together.</h2>
+      <p class="final-cta-sub">
+        Open to Junior Penetration Tester roles and security-focused collaborations.
+        I respond fast — no ticket system required.
+      </p>
+      <a href="mailto:hamamahme686@gmail.com" class="btn btn-primary btn-large">Report an Opportunity →</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer id="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="nav-logo">AH<span class="nav-logo-dot">.</span></span>
+      <p>Junior Penetration Tester · Elmahalla, Gharbiah, Egypt</p>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:hamamahme686@gmail.com">hamamahme686@gmail.com</a>
+      <a href="tel:+201205562188">+20 120 556 2188</a>
+      <a href="https://linkedin.com/in/ahmed-hamam-983baa430" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://tryhackme.com/p/hamamahme686" target="_blank" rel="noopener">TryHackMe</a>
+    </div>
+    <a href="assets/Ahmed_Hamam_CV.pdf" download class="btn btn-ghost btn-small">Download CV ↓</a>
+  </div>
+  <p class="footer-fine">END OF REPORT — CONFIDENTIAL // AHMED HAMAM © 2026</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
